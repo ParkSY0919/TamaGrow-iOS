@@ -33,7 +33,7 @@ class BaseViewController: UIViewController {
     }
     
     private func baseVCNavSetting() {
-        view.backgroundColor = UIColor.bg100
+        view.backgroundColor = UIColor.white
         
         switch navTitle==nil {
         case true:
@@ -41,7 +41,7 @@ class BaseViewController: UIViewController {
         case false:
             print("navTitle is not nil")
             navigationItem.title = navTitle
-            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.text100]
+            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
         }
         
         switch navBtnType {
@@ -67,8 +67,6 @@ class BaseViewController: UIViewController {
         case .both(let left, let right):
             print("아직 이런 경우 없음")
         }
-        
-        
     }
     
     func setHierarchy() {}
@@ -76,10 +74,6 @@ class BaseViewController: UIViewController {
     func setLayout() {}
     
     func setStyle() {}
-    
-    func setChildrenViewLayout<T: BaseView>(view: T) {
-        view.setLayout()
-    }
     
     func viewTransition<T: UIViewController>(viewController: T, transitionStyle: ViewTransitionType) {
         switch transitionStyle {
