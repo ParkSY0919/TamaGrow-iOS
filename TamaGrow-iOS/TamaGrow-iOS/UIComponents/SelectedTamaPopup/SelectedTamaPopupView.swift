@@ -12,11 +12,6 @@ import Then
 
 final class SelectedTamaPopupView: BaseView {
     
-    //MARK: - Properties
-    private let leftBtnTitle: String
-    private let rightBtnTitle: String
-    
-    
     //MARK: - UI Properties
     private let popupContainerView = UIView()
     private let tamaView = TamaView()
@@ -24,14 +19,14 @@ final class SelectedTamaPopupView: BaseView {
     private let tamaInfoLabel = UILabel()
     private let btnSeparatorLine1 = UIView()
     private let btnSeparatorLine2 = UIView()
-    private let leftBtn = UIButton()
-    private let rightBtn = UIButton()
+    let leftBtn = UIButton()
+    let rightBtn = UIButton()
     
     
     //MARK: - Init
     init(leftBtnTitle: String, rightBtnTitle: String, tamaImage: UIImage, tamaName: String) {
-        self.leftBtnTitle = leftBtnTitle
-        self.rightBtnTitle = rightBtnTitle
+        self.leftBtn.setTitle(leftBtnTitle, for: .normal)
+        self.rightBtn.setTitle(rightBtnTitle, for: .normal)
         self.tamaView.iconImageView.image = tamaImage
         self.tamaView.nameLabel.text = tamaName
         StringLiterals.SelectedTama.tamaInfo = tamaName
@@ -122,8 +117,6 @@ final class SelectedTamaPopupView: BaseView {
                 if i == leftBtn {
                     $0.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
                 }
-                let title = i == leftBtn ? self.leftBtnTitle : self.rightBtnTitle
-                $0.setTitle(title, for: .normal)
                 $0.titleLabel?.font = .systemFont(ofSize: 13, weight: .semibold)
                 $0.setTitleColor(UIColor.fontLayer, for: .normal)
             }

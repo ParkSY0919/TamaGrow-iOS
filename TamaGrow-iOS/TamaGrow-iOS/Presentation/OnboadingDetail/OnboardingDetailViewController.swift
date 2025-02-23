@@ -9,10 +9,22 @@ import UIKit
 
 final class OnboardingDetailViewController: BaseViewController {
     
-    private let mainView: SelectedTamaPopupView
+    //MARK: - Properties
+    private let viewModel: OnboardingDetailViewModel
     
-    init(mainView: SelectedTamaPopupView) {
-        self.mainView = mainView
+    
+    //MARK: - UI Properties
+    private lazy var mainView = SelectedTamaPopupView(
+        leftBtnTitle: viewModel.leftBtnTitle,
+        rightBtnTitle: viewModel.rightBtnTitle,
+        tamaImage: viewModel.tamaImage,
+        tamaName: viewModel.tamaName
+    )
+    
+    
+    //MARK: - Init
+    init(viewModel: OnboardingDetailViewModel) {
+        self.viewModel = viewModel
         
         super.init()
     }
@@ -23,12 +35,39 @@ final class OnboardingDetailViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setAddTarget()
     }
     
     override func setLayout() {
 //        mainView.snp.makeConstraints {
 //            $0.center.equalTo(view.safeAreaLayoutGuide)
 //        }
+    }
+    
+}
+
+private extension OnboardingDetailViewController {
+    
+    func setAddTarget() {
+        mainView.leftBtn.addTarget(self, action: #selector(leftBtnTapped), for: .touchUpInside)
+        mainView.rightBtn.addTarget(self, action: #selector(rightBtnTapped), for: .touchUpInside)
+    }
+    
+    @objc func leftBtnTapped() {
+        self.dismiss(animated: true)
+    }
+    
+    @objc func rightBtnTapped() {
+        print(#function)
+        UserDefaultsManager.isOnboarding = false
+        for i in TamaType.allCases {
+            if i.rawValue == viewModel.tamaName {
+                UserDefaultsManager.tamaType = i.rawValue
+            }
+        }
+        let vc = MainViewController(navTitle: "\(UserDefaultsManager.nickname)님의 다마고치", navBtnType: .right(.one))
+        viewTransition(viewController: vc, transitionStyle: .resetRootVCwithNav)
     }
     
 }

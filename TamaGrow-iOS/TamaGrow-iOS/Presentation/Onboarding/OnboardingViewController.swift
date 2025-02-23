@@ -18,6 +18,7 @@ final class OnboardingViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
         setDelegate()
     }
     
@@ -52,7 +53,13 @@ extension OnboardingViewController: UICollectionViewDelegate {
         default:
             print("didSelectItemAt error")
         }
-        let vc = OnboardingDetailViewController(mainView: SelectedTamaPopupView(leftBtnTitle: leftTitle, rightBtnTitle: rightTitle, tamaImage: tamaImge, tamaName: tamaName))
+        let nextViewModel = OnboardingDetailViewModel(
+            leftBtnTitle: leftTitle,
+            rightBtnTitle: rightTitle,
+            tamaImage: tamaImge,
+            tamaName: tamaName
+        )
+        let vc = OnboardingDetailViewController(viewModel: nextViewModel)
         viewTransition(viewController: vc, transitionStyle: .overCurrentContext)
     }
     
@@ -77,7 +84,6 @@ extension OnboardingViewController: UICollectionViewDataSource {
         default:
             cell.configureTamaView(image: UIImage(resource: .no), name: StringLiterals.SelectedTama.preparingTama)
         }
-        
         return cell
     }
     
