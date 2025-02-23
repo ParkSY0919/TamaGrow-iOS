@@ -13,7 +13,7 @@ import RxSwift
 final class SettingViewController: BaseViewController {
     
     private let viewModel: SettingViewModel
-    private let disposeBag = DisposeBag()
+    private var disposeBag = DisposeBag()
     
     private let mainView = SettingView()
     
@@ -30,6 +30,9 @@ final class SettingViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        //닉네임 변경 시 이를 나타내야 하기에 bind를 willAppear에 사용
+          //pop으로 돌아왔을 때에 collectionView delegate, datasource 등이 남아있어 disposeBag 초기화도 병행
+        disposeBag = DisposeBag()
         bind()
     }
     
@@ -48,6 +51,7 @@ private extension SettingViewController {
                     print("0")
                 case 1:
                     print("1")
+                    owner.changeTamaTypeCell()
                 case 2:
                     owner.resetTypeCell()
                 default:
@@ -62,6 +66,11 @@ private extension SettingViewController {
                 cell.configureSettingCell(model: model)
             }
             .disposed(by: disposeBag)
+    }
+    
+    func changeTamaTypeCell() {
+        let vc = EditNicknameViewController(viewModel: EditNicknameViewModel())
+        viewTransition(viewController: vc, transitionStyle: .push)
     }
     
     func resetTypeCell() {

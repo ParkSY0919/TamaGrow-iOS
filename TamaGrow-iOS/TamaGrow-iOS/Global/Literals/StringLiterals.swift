@@ -14,6 +14,7 @@ extension StringLiterals {
     enum System {
         static var cancel = "취소"
         static var start = "시작하기"
+        static var change = "변경하기"
     }
     
     enum SelectedTama {
