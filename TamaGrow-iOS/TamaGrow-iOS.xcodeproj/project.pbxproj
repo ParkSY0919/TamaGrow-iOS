@@ -32,6 +32,8 @@
 		9EA26A552D6A0A7D00029A14 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 9EA26A542D6A0A7D00029A14 /* Then */; };
 		9EA26A582D6A0A9700029A14 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 9EA26A572D6A0A9700029A14 /* RxCocoa */; };
 		9EA26A5A2D6A0A9700029A14 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9EA26A592D6A0A9700029A14 /* RxSwift */; };
+		9EA26A612D6AC83600029A14 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A602D6AC83600029A14 /* OnboardingViewController.swift */; };
+		9EA26A632D6AC89800029A14 /* SelectedTamaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A622D6AC89800029A14 /* SelectedTamaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		9EA26A372D6A0A5300029A14 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		9EA26A382D6A0A5300029A14 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		9EA26A392D6A0A5300029A14 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9EA26A602D6AC83600029A14 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		9EA26A622D6AC89800029A14 /* SelectedTamaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTamaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +208,7 @@
 		9EA26A452D6A0A5300029A14 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				9EA26A5F2D6AC80400029A14 /* Onboarding */,
 				9EA26A3A2D6A0A5300029A14 /* Base */,
 			);
 			path = Presentation;
@@ -212,8 +217,25 @@
 		9EA26A5C2D6A0AA800029A14 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				9EA26A5E2D6AC7D000029A14 /* SelectedTama */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		9EA26A5E2D6AC7D000029A14 /* SelectedTama */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26A622D6AC89800029A14 /* SelectedTamaView.swift */,
+			);
+			path = SelectedTama;
+			sourceTree = "<group>";
+		};
+		9EA26A5F2D6AC80400029A14 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26A602D6AC83600029A14 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,12 +321,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EA26A462D6A0A5300029A14 /* BaseCollectionViewCell.swift in Sources */,
+				9EA26A632D6AC89800029A14 /* SelectedTamaView.swift in Sources */,
 				9EA26A482D6A0A5300029A14 /* BaseViewController.swift in Sources */,
 				9EA26A492D6A0A5300029A14 /* NavigationBtnType.swift in Sources */,
 				9EA26A4A2D6A0A5300029A14 /* BaseTableViewCell.swift in Sources */,
 				9EA26A4B2D6A0A5300029A14 /* ViewTransitionType.swift in Sources */,
 				9EA26A4C2D6A0A5300029A14 /* BaseView.swift in Sources */,
 				9EA269EF2D6A08A700029A14 /* AppDelegate.swift in Sources */,
+				9EA26A612D6AC83600029A14 /* OnboardingViewController.swift in Sources */,
 				9EA26A1D2D6A0A1300029A14 /* UserDefaultsManager.swift in Sources */,
 				9EA26A202D6A0A1300029A14 /* UIButton+.swift in Sources */,
 				9EA26A212D6A0A1300029A14 /* UIView+.swift in Sources */,
