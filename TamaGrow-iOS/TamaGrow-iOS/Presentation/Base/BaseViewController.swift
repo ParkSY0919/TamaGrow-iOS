@@ -34,6 +34,7 @@ class BaseViewController: UIViewController {
     
     private func baseVCNavSetting() {
         navigationController?.navigationBar.backgroundColor = UIColor.bg
+        navigationController?.navigationBar.tintColor = UIColor.fontLayer
         
         switch navTitle==nil {
         case true:
@@ -41,7 +42,7 @@ class BaseViewController: UIViewController {
         case false:
             print("navTitle is not nil")
             navigationItem.title = navTitle
-            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.fontLayer]
         }
         
         switch navBtnType {
@@ -59,13 +60,14 @@ class BaseViewController: UIViewController {
             switch right {
             case .none:
                 print("navBtnType right none")
+            case .one:
+                let navRightItem = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: .done, target: self, action: #selector(settingBtnTapped))
+                navigationItem.rightBarButtonItem = navRightItem
             case .double:
-                let firstItem = UIBarButtonItem(image: UIImage(systemName: "arrow.clockwise"), style: .done, target: self, action: #selector(refreshBtnTapped))
-                let secondItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .done, target: self, action: #selector(searchBtnTapped))
-                navigationItem.setRightBarButtonItems([firstItem, secondItem], animated: true)
+                print("이런 경우 없음")
             }
         case .both(let left, let right):
-            print("아직 이런 경우 없음")
+            print("이런 경우 없음")
         }
     }
     
@@ -128,12 +130,7 @@ class BaseViewController: UIViewController {
     }
     
     @objc
-    func refreshBtnTapped() {
-        print(#function)
-    }
-    
-    @objc
-    func searchBtnTapped() {
+    func settingBtnTapped() {
         print(#function)
     }
     

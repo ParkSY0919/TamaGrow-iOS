@@ -20,6 +20,7 @@ enum NavigationBtnType {
     
     enum Right {
         case none
+        case one
         case double
     }
 }

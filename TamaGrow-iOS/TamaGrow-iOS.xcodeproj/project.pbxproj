@@ -39,6 +39,8 @@
 		9EA26A6C2D6AE04800029A14 /* OnboardingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A6B2D6AE04800029A14 /* OnboardingDetailViewController.swift */; };
 		9EA26A722D6AE34300029A14 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A712D6AE34300029A14 /* OnboardingViewController.swift */; };
 		9EA26A742D6AE43C00029A14 /* OnboardingDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A732D6AE43C00029A14 /* OnboardingDetailViewModel.swift */; };
+		9EA26A772D6AFFBB00029A14 /* TamaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A762D6AFFBB00029A14 /* TamaType.swift */; };
+		9EA26A7B2D6B057100029A14 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A7A2D6B057100029A14 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		9EA26A6B2D6AE04800029A14 /* OnboardingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDetailViewController.swift; sourceTree = "<group>"; };
 		9EA26A712D6AE34300029A14 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		9EA26A732D6AE43C00029A14 /* OnboardingDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDetailViewModel.swift; sourceTree = "<group>"; };
+		9EA26A762D6AFFBB00029A14 /* TamaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaType.swift; sourceTree = "<group>"; };
+		9EA26A7A2D6B057100029A14 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,7 @@
 		9EA26A1A2D6A0A1300029A14 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				9EA26A752D6AFFB100029A14 /* Enums */,
 				9EA26A162D6A0A1300029A14 /* DateFormatterManager.swift */,
 				9EA26A182D6A0A1300029A14 /* UIAlertManager.swift */,
 				9EA26A192D6A0A1300029A14 /* UserDefaultsManager.swift */,
@@ -218,6 +223,7 @@
 		9EA26A452D6A0A5300029A14 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				9EA26A782D6B056200029A14 /* Main */,
 				9EA26A5F2D6AC80400029A14 /* Onboarding */,
 				9EA26A702D6AE33000029A14 /* OnboadingDetail */,
 				9EA26A3A2D6A0A5300029A14 /* Base */,
@@ -263,10 +269,34 @@
 		9EA26A702D6AE33000029A14 /* OnboadingDetail */ = {
 			isa = PBXGroup;
 			children = (
-				9EA26A6B2D6AE04800029A14 /* OnboardingDetailViewController.swift */,
 				9EA26A732D6AE43C00029A14 /* OnboardingDetailViewModel.swift */,
+				9EA26A6B2D6AE04800029A14 /* OnboardingDetailViewController.swift */,
 			);
 			path = OnboadingDetail;
+			sourceTree = "<group>";
+		};
+		9EA26A752D6AFFB100029A14 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26A762D6AFFBB00029A14 /* TamaType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		9EA26A782D6B056200029A14 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26A792D6B056800029A14 /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9EA26A792D6B056800029A14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26A7A2D6B057100029A14 /* MainViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,6 +388,7 @@
 				9EA26A742D6AE43C00029A14 /* OnboardingDetailViewModel.swift in Sources */,
 				9EA26A492D6A0A5300029A14 /* NavigationBtnType.swift in Sources */,
 				9EA26A4A2D6A0A5300029A14 /* BaseTableViewCell.swift in Sources */,
+				9EA26A7B2D6B057100029A14 /* MainViewController.swift in Sources */,
 				9EA26A4B2D6A0A5300029A14 /* ViewTransitionType.swift in Sources */,
 				9EA26A4C2D6A0A5300029A14 /* BaseView.swift in Sources */,
 				9EA269EF2D6A08A700029A14 /* AppDelegate.swift in Sources */,
@@ -365,6 +396,7 @@
 				9EA26A1D2D6A0A1300029A14 /* UserDefaultsManager.swift in Sources */,
 				9EA26A672D6AD7BD00029A14 /* TamaView.swift in Sources */,
 				9EA26A722D6AE34300029A14 /* OnboardingViewController.swift in Sources */,
+				9EA26A772D6AFFBB00029A14 /* TamaType.swift in Sources */,
 				9EA26A202D6A0A1300029A14 /* UIButton+.swift in Sources */,
 				9EA26A212D6A0A1300029A14 /* UIView+.swift in Sources */,
 				9EA26A232D6A0A1300029A14 /* DateFormatterManager.swift in Sources */,
