@@ -14,4 +14,5 @@ enum ViewTransitionType {
     case present
     case presentWithNav
     case presentFullScreenWithNav
+    case overCurrentContext
 }

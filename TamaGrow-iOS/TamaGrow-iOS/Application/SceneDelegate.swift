@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(windowScene: windowScene)
         
-        self.window?.rootViewController = UINavigationController(rootViewController: BaseViewController())
+        self.window?.rootViewController = UINavigationController(rootViewController: OnboardingViewController(navTitle: "다마고치 선택하기"))
         
         self.window?.makeKeyAndVisible()
     }

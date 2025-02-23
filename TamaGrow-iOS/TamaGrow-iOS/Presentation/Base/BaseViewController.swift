@@ -33,7 +33,7 @@ class BaseViewController: UIViewController {
     }
     
     private func baseVCNavSetting() {
-        view.backgroundColor = UIColor.white
+        navigationController?.navigationBar.backgroundColor = UIColor.bg
         
         switch navTitle==nil {
         case true:
@@ -73,7 +73,9 @@ class BaseViewController: UIViewController {
     
     func setLayout() {}
     
-    func setStyle() {}
+    func setStyle() {
+        view.backgroundColor = UIColor.bg
+    }
     
     func viewTransition<T: UIViewController>(viewController: T, transitionStyle: ViewTransitionType) {
         switch transitionStyle {
@@ -113,6 +115,10 @@ class BaseViewController: UIViewController {
             let nav = UINavigationController(rootViewController: viewController)
             nav.modalPresentationStyle = .fullScreen
             return self.present(nav, animated: true)
+        case .overCurrentContext:
+            viewController.modalPresentationStyle = .overCurrentContext
+            viewController.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+            return self.present(viewController, animated: true)
         }
     }
     

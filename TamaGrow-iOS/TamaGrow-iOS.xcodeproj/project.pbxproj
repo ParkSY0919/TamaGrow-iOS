@@ -32,10 +32,13 @@
 		9EA26A552D6A0A7D00029A14 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 9EA26A542D6A0A7D00029A14 /* Then */; };
 		9EA26A582D6A0A9700029A14 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 9EA26A572D6A0A9700029A14 /* RxCocoa */; };
 		9EA26A5A2D6A0A9700029A14 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9EA26A592D6A0A9700029A14 /* RxSwift */; };
-		9EA26A612D6AC83600029A14 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A602D6AC83600029A14 /* OnboardingViewController.swift */; };
 		9EA26A632D6AC89800029A14 /* SelectedTamaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A622D6AC89800029A14 /* SelectedTamaView.swift */; };
 		9EA26A652D6ACA6300029A14 /* SelectedTamaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A642D6ACA6300029A14 /* SelectedTamaCell.swift */; };
 		9EA26A672D6AD7BD00029A14 /* TamaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A662D6AD7BD00029A14 /* TamaView.swift */; };
+		9EA26A6A2D6ADE1800029A14 /* SelectedTamaPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A692D6ADE1800029A14 /* SelectedTamaPopupView.swift */; };
+		9EA26A6C2D6AE04800029A14 /* OnboardingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A6B2D6AE04800029A14 /* OnboardingDetailViewController.swift */; };
+		9EA26A722D6AE34300029A14 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A712D6AE34300029A14 /* OnboardingViewController.swift */; };
+		9EA26A742D6AE43C00029A14 /* OnboardingDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A732D6AE43C00029A14 /* OnboardingDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,10 +65,13 @@
 		9EA26A372D6A0A5300029A14 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		9EA26A382D6A0A5300029A14 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		9EA26A392D6A0A5300029A14 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		9EA26A602D6AC83600029A14 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		9EA26A622D6AC89800029A14 /* SelectedTamaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTamaView.swift; sourceTree = "<group>"; };
 		9EA26A642D6ACA6300029A14 /* SelectedTamaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTamaCell.swift; sourceTree = "<group>"; };
 		9EA26A662D6AD7BD00029A14 /* TamaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaView.swift; sourceTree = "<group>"; };
+		9EA26A692D6ADE1800029A14 /* SelectedTamaPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTamaPopupView.swift; sourceTree = "<group>"; };
+		9EA26A6B2D6AE04800029A14 /* OnboardingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDetailViewController.swift; sourceTree = "<group>"; };
+		9EA26A712D6AE34300029A14 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		9EA26A732D6AE43C00029A14 /* OnboardingDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				9EA26A5F2D6AC80400029A14 /* Onboarding */,
+				9EA26A702D6AE33000029A14 /* OnboadingDetail */,
 				9EA26A3A2D6A0A5300029A14 /* Base */,
 			);
 			path = Presentation;
@@ -223,6 +230,7 @@
 			children = (
 				9EA26A662D6AD7BD00029A14 /* TamaView.swift */,
 				9EA26A5E2D6AC7D000029A14 /* SelectedTama */,
+				9EA26A682D6ADCA900029A14 /* SelectedTamaPopup */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -239,9 +247,26 @@
 		9EA26A5F2D6AC80400029A14 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				9EA26A602D6AC83600029A14 /* OnboardingViewController.swift */,
+				9EA26A712D6AE34300029A14 /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		9EA26A682D6ADCA900029A14 /* SelectedTamaPopup */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26A692D6ADE1800029A14 /* SelectedTamaPopupView.swift */,
+			);
+			path = SelectedTamaPopup;
+			sourceTree = "<group>";
+		};
+		9EA26A702D6AE33000029A14 /* OnboadingDetail */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26A6B2D6AE04800029A14 /* OnboardingDetailViewController.swift */,
+				9EA26A732D6AE43C00029A14 /* OnboardingDetailViewModel.swift */,
+			);
+			path = OnboadingDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,21 +354,24 @@
 				9EA26A462D6A0A5300029A14 /* BaseCollectionViewCell.swift in Sources */,
 				9EA26A632D6AC89800029A14 /* SelectedTamaView.swift in Sources */,
 				9EA26A482D6A0A5300029A14 /* BaseViewController.swift in Sources */,
+				9EA26A6A2D6ADE1800029A14 /* SelectedTamaPopupView.swift in Sources */,
+				9EA26A742D6AE43C00029A14 /* OnboardingDetailViewModel.swift in Sources */,
 				9EA26A492D6A0A5300029A14 /* NavigationBtnType.swift in Sources */,
 				9EA26A4A2D6A0A5300029A14 /* BaseTableViewCell.swift in Sources */,
 				9EA26A4B2D6A0A5300029A14 /* ViewTransitionType.swift in Sources */,
 				9EA26A4C2D6A0A5300029A14 /* BaseView.swift in Sources */,
 				9EA269EF2D6A08A700029A14 /* AppDelegate.swift in Sources */,
-				9EA26A612D6AC83600029A14 /* OnboardingViewController.swift in Sources */,
 				9EA26A652D6ACA6300029A14 /* SelectedTamaCell.swift in Sources */,
 				9EA26A1D2D6A0A1300029A14 /* UserDefaultsManager.swift in Sources */,
 				9EA26A672D6AD7BD00029A14 /* TamaView.swift in Sources */,
+				9EA26A722D6AE34300029A14 /* OnboardingViewController.swift in Sources */,
 				9EA26A202D6A0A1300029A14 /* UIButton+.swift in Sources */,
 				9EA26A212D6A0A1300029A14 /* UIView+.swift in Sources */,
 				9EA26A232D6A0A1300029A14 /* DateFormatterManager.swift in Sources */,
 				9EA26A242D6A0A1300029A14 /* UIImageView+.swift in Sources */,
 				9EA26A262D6A0A1300029A14 /* UILabel+.swift in Sources */,
 				9EA26A272D6A0A1300029A14 /* UIAlertManager.swift in Sources */,
+				9EA26A6C2D6AE04800029A14 /* OnboardingDetailViewController.swift in Sources */,
 				9EA26A282D6A0A1300029A14 /* UITextField+.swift in Sources */,
 				9EA26A292D6A0A1300029A14 /* UIStackView+.swift in Sources */,
 				9EA26A2B2D6A0A1300029A14 /* ViewModelProtocol.swift in Sources */,
