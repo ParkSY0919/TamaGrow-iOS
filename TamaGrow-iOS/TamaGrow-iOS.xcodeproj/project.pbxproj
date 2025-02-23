@@ -34,6 +34,8 @@
 		9EA26A5A2D6A0A9700029A14 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9EA26A592D6A0A9700029A14 /* RxSwift */; };
 		9EA26A612D6AC83600029A14 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A602D6AC83600029A14 /* OnboardingViewController.swift */; };
 		9EA26A632D6AC89800029A14 /* SelectedTamaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A622D6AC89800029A14 /* SelectedTamaView.swift */; };
+		9EA26A652D6ACA6300029A14 /* SelectedTamaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A642D6ACA6300029A14 /* SelectedTamaCell.swift */; };
+		9EA26A672D6AD7BD00029A14 /* TamaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A662D6AD7BD00029A14 /* TamaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		9EA26A392D6A0A5300029A14 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9EA26A602D6AC83600029A14 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		9EA26A622D6AC89800029A14 /* SelectedTamaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTamaView.swift; sourceTree = "<group>"; };
+		9EA26A642D6ACA6300029A14 /* SelectedTamaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTamaCell.swift; sourceTree = "<group>"; };
+		9EA26A662D6AD7BD00029A14 /* TamaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +221,7 @@
 		9EA26A5C2D6A0AA800029A14 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				9EA26A662D6AD7BD00029A14 /* TamaView.swift */,
 				9EA26A5E2D6AC7D000029A14 /* SelectedTama */,
 			);
 			path = UIComponents;
@@ -226,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				9EA26A622D6AC89800029A14 /* SelectedTamaView.swift */,
+				9EA26A642D6ACA6300029A14 /* SelectedTamaCell.swift */,
 			);
 			path = SelectedTama;
 			sourceTree = "<group>";
@@ -329,7 +335,9 @@
 				9EA26A4C2D6A0A5300029A14 /* BaseView.swift in Sources */,
 				9EA269EF2D6A08A700029A14 /* AppDelegate.swift in Sources */,
 				9EA26A612D6AC83600029A14 /* OnboardingViewController.swift in Sources */,
+				9EA26A652D6ACA6300029A14 /* SelectedTamaCell.swift in Sources */,
 				9EA26A1D2D6A0A1300029A14 /* UserDefaultsManager.swift in Sources */,
+				9EA26A672D6AD7BD00029A14 /* TamaView.swift in Sources */,
 				9EA26A202D6A0A1300029A14 /* UIButton+.swift in Sources */,
 				9EA26A212D6A0A1300029A14 /* UIView+.swift in Sources */,
 				9EA26A232D6A0A1300029A14 /* DateFormatterManager.swift in Sources */,
