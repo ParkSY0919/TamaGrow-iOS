@@ -35,7 +35,7 @@ final class SelectedTamaView: BaseView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let ableScreenWidth = (self.bounds.width - 40 - 30) / 3
+        let ableScreenWidth = (self.bounds.width - 40 - 50) / 3
         collectionViewLayout.itemSize = CGSize(width: ableScreenWidth, height: ableScreenWidth)
     }
     
@@ -46,7 +46,7 @@ private extension SelectedTamaView {
     func setCollectionViewLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.do {
-            $0.minimumInteritemSpacing = 15
+            $0.minimumInteritemSpacing = 25
             $0.minimumLineSpacing = 20
             $0.scrollDirection = .vertical
             $0.sectionInset = UIEdgeInsets(top: 15, left: 20, bottom: 15, right: 20)
