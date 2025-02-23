@@ -49,10 +49,12 @@ private extension SettingViewController {
                 switch row {
                 case 0:
                     print("0")
+                    owner.editNicknameTypeCell()
                 case 1:
                     print("1")
                     owner.changeTamaTypeCell()
                 case 2:
+                    print("2")
                     owner.resetTypeCell()
                 default:
                     print("")
@@ -63,9 +65,18 @@ private extension SettingViewController {
             .bind(to: mainView.tableView.rx.items(cellIdentifier: SettingCell.cellIdentifier, cellType: SettingCell.self)) { row, model, cell in
                 cell.backgroundColor = UIColor.bg
                 cell.selectionStyle = .none
-                cell.configureSettingCell(model: model)
+                if row == 0 {
+                    cell.configureSettingCell(model: model, isChangeNickname: true)
+                } else {
+                    cell.configureSettingCell(model: model)
+                }
             }
             .disposed(by: disposeBag)
+    }
+    
+    func editNicknameTypeCell() {
+        let vc = EditNicknameViewController(viewModel: EditNicknameViewModel())
+        viewTransition(viewController: vc, transitionStyle: .push)
     }
     
     func changeTamaTypeCell() {

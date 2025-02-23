@@ -54,6 +54,9 @@
 		9EA26A9A2D6B94A000029A14 /* ChangeTamaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A992D6B94A000029A14 /* ChangeTamaViewModel.swift */; };
 		9EA26A9D2D6B977C00029A14 /* TamaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A9C2D6B977C00029A14 /* TamaModel.swift */; };
 		9EA26AA22D6B9F7900029A14 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26AA12D6B9F7900029A14 /* OnboardingViewModel.swift */; };
+		9EA26AA72D6BA18B00029A14 /* EditNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26AA62D6BA18B00029A14 /* EditNicknameViewController.swift */; };
+		9EA26AA92D6BA1A700029A14 /* EditNicknameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26AA82D6BA1A700029A14 /* EditNicknameView.swift */; };
+		9EA26AAB2D6BA43C00029A14 /* EditNicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26AAA2D6BA43C00029A14 /* EditNicknameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +105,9 @@
 		9EA26A992D6B94A000029A14 /* ChangeTamaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTamaViewModel.swift; sourceTree = "<group>"; };
 		9EA26A9C2D6B977C00029A14 /* TamaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaModel.swift; sourceTree = "<group>"; };
 		9EA26AA12D6B9F7900029A14 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		9EA26AA62D6BA18B00029A14 /* EditNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNicknameViewController.swift; sourceTree = "<group>"; };
+		9EA26AA82D6BA1A700029A14 /* EditNicknameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNicknameView.swift; sourceTree = "<group>"; };
+		9EA26AAA2D6BA43C00029A14 /* EditNicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNicknameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +255,7 @@
 		9EA26A452D6A0A5300029A14 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				9EA26AA32D6BA16700029A14 /* EditNickname */,
 				9EA26A952D6B944C00029A14 /* ChangeTama */,
 				9EA26A852D6B85FE00029A14 /* Setting */,
 				9EA26A782D6B056200029A14 /* Main */,
@@ -426,6 +433,32 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		9EA26AA32D6BA16700029A14 /* EditNickname */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26AA52D6BA17F00029A14 /* ViewModel */,
+				9EA26AA42D6BA17A00029A14 /* Views */,
+			);
+			path = EditNickname;
+			sourceTree = "<group>";
+		};
+		9EA26AA42D6BA17A00029A14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26AA82D6BA1A700029A14 /* EditNicknameView.swift */,
+				9EA26AA62D6BA18B00029A14 /* EditNicknameViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9EA26AA52D6BA17F00029A14 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26AAA2D6BA43C00029A14 /* EditNicknameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -512,6 +545,7 @@
 				9EA26A632D6AC89800029A14 /* SelectedTamaView.swift in Sources */,
 				9EA26A482D6A0A5300029A14 /* BaseViewController.swift in Sources */,
 				9EA26A6A2D6ADE1800029A14 /* SelectedTamaPopupView.swift in Sources */,
+				9EA26AA92D6BA1A700029A14 /* EditNicknameView.swift in Sources */,
 				9EA26A742D6AE43C00029A14 /* OnboardingDetailViewModel.swift in Sources */,
 				9EA26A8B2D6B866B00029A14 /* SettingViewController.swift in Sources */,
 				9EA26A9D2D6B977C00029A14 /* TamaModel.swift in Sources */,
@@ -521,7 +555,9 @@
 				9EA26A7B2D6B057100029A14 /* MainViewController.swift in Sources */,
 				9EA26A4B2D6A0A5300029A14 /* ViewTransitionType.swift in Sources */,
 				9EA26A932D6B8CF900029A14 /* SettingViewModel.swift in Sources */,
+				9EA26AAB2D6BA43C00029A14 /* EditNicknameViewModel.swift in Sources */,
 				9EA26A8E2D6B884200029A14 /* SettingCellModel.swift in Sources */,
+				9EA26AA72D6BA18B00029A14 /* EditNicknameViewController.swift in Sources */,
 				9EA26A4C2D6A0A5300029A14 /* BaseView.swift in Sources */,
 				9EA269EF2D6A08A700029A14 /* AppDelegate.swift in Sources */,
 				9EA26A652D6ACA6300029A14 /* SelectedTamaCell.swift in Sources */,

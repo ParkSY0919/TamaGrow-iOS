@@ -15,6 +15,7 @@ extension StringLiterals {
         static var cancel = "취소"
         static var start = "시작하기"
         static var change = "변경하기"
+        static var save = "저장"
     }
     
     enum SelectedTama {
@@ -69,6 +70,11 @@ extension StringLiterals {
         static var changeTamaCellTitle = "다마고치 변경하기"
         static var resetTamaCellImage = "arrow.clockwise"
         static var resetCellTitle = "데이터 초기화"
+    }
+    
+    enum EditNickname {
+        static var navTitle = "\(UserDefaultsManager.nickname)님 이름 정하기"
+        static var editNicknamePlaceholder = "\(UserDefaultsManager.nickname)님의 이름을 알려주세요!"
     }
     
 }

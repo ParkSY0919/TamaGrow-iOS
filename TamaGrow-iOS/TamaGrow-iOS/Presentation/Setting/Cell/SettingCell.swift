@@ -71,11 +71,13 @@ final class SettingCell: BaseTableViewCell {
         }
     }
 
-    func configureSettingCell(model: SettingCellModel) {
+    func configureSettingCell(model: SettingCellModel, isChangeNickname: Bool = false) {
         iconImageView.image = UIImage(systemName: model.icon)
         titleLabel.text = model.title
-        accessoryLabel.text = model.accessoryText
+        accessoryLabel.text = isChangeNickname ?
+            UserDefaultsManager.nickname : model.accessoryText
         accessoryLabel.isHidden = model.accessoryText.isEmpty
+        
     }
     
 }
