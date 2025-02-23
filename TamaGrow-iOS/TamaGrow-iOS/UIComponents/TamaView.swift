@@ -29,8 +29,10 @@ final class TamaView: BaseView {
         }
         
         nameContainerView.snp.makeConstraints {
-            $0.top.equalTo(iconImageView.snp.bottom).offset(4)
-            $0.bottom.horizontalEdges.equalToSuperview()
+            $0.top.equalTo(iconImageView.snp.bottom).offset(8)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(nameLabel.snp.width).inset(-10)
+            $0.bottom.equalToSuperview()
         }
         
         nameLabel.snp.makeConstraints {
@@ -46,14 +48,14 @@ final class TamaView: BaseView {
         }
         
         nameContainerView.do {
-            $0.layer.borderWidth = 0.5
+            $0.layer.borderWidth = 1
             $0.layer.borderColor = UIColor.fontLayer.cgColor
             $0.layer.cornerRadius = 4
         }
         
         nameLabel.setLabelUI(
             "준비중이에요",
-            font: .systemFont(ofSize: 14, weight: .medium),
+            font: .systemFont(ofSize: 13, weight: .semibold),
             textColor: UIColor.fontLayer,
             alignment: .center
         )
