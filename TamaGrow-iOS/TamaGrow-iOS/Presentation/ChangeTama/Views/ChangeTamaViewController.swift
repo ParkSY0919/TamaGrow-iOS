@@ -1,5 +1,5 @@
 //
-//  EditNicknameViewController.swift
+//  ChangeTamaViewController.swift
 //  TamaGrow-iOS
 //
 //  Created by 박신영 on 2/24/25.
@@ -10,9 +10,9 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-final class EditNicknameViewController: BaseViewController {
+final class ChangeTamaViewController: BaseViewController {
     
-    private let viewModel: EditNicknameViewModel
+    private let viewModel: ChangeTamaViewModel
     private let mainView = SelectedTamaView()
     private let disposeBag = DisposeBag()
     
@@ -22,7 +22,7 @@ final class EditNicknameViewController: BaseViewController {
         view = mainView
     }
     
-    init(viewModel: EditNicknameViewModel) {
+    init(viewModel: ChangeTamaViewModel) {
         self.viewModel = viewModel
         
         super.init(navTitle: "다마고치 변경하기")
@@ -39,7 +39,7 @@ final class EditNicknameViewController: BaseViewController {
     }
     
     private func bind() {
-        let input = EditNicknameViewModel.Input(selectedIndex: selectedIndex)
+        let input = ChangeTamaViewModel.Input(selectedIndex: selectedIndex)
         let output = viewModel.transform(input: input)
         
         output.items

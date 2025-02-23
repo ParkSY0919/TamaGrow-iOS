@@ -69,7 +69,7 @@ private extension SettingViewController {
     }
     
     func changeTamaTypeCell() {
-        let vc = EditNicknameViewController(viewModel: EditNicknameViewModel())
+        let vc = ChangeTamaViewController(viewModel: ChangeTamaViewModel())
         viewTransition(viewController: vc, transitionStyle: .push)
     }
     

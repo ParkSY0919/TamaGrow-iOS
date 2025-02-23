@@ -1,5 +1,5 @@
 //
-//  EditNicknameViewModel.swift
+//  ChangeTamaViewModel.swift
 //  TamaGrow-iOS
 //
 //  Created by 박신영 on 2/24/25.
@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-final class EditNicknameViewModel: ViewModelProtocol {
+final class ChangeTamaViewModel: ViewModelProtocol {
     
     struct Input {
         let selectedIndex: PublishSubject<Int>

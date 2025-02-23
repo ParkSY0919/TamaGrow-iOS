@@ -50,8 +50,8 @@
 		9EA26A8E2D6B884200029A14 /* SettingCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A8D2D6B884200029A14 /* SettingCellModel.swift */; };
 		9EA26A902D6B89C700029A14 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A8F2D6B89C700029A14 /* SettingView.swift */; };
 		9EA26A932D6B8CF900029A14 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A922D6B8CF900029A14 /* SettingViewModel.swift */; };
-		9EA26A972D6B946C00029A14 /* EditNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A962D6B946C00029A14 /* EditNicknameViewController.swift */; };
-		9EA26A9A2D6B94A000029A14 /* EditNicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A992D6B94A000029A14 /* EditNicknameViewModel.swift */; };
+		9EA26A972D6B946C00029A14 /* ChangeTamaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A962D6B946C00029A14 /* ChangeTamaViewController.swift */; };
+		9EA26A9A2D6B94A000029A14 /* ChangeTamaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A992D6B94A000029A14 /* ChangeTamaViewModel.swift */; };
 		9EA26A9D2D6B977C00029A14 /* TamaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A9C2D6B977C00029A14 /* TamaModel.swift */; };
 		9EA26AA22D6B9F7900029A14 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26AA12D6B9F7900029A14 /* OnboardingViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -98,8 +98,8 @@
 		9EA26A8D2D6B884200029A14 /* SettingCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCellModel.swift; sourceTree = "<group>"; };
 		9EA26A8F2D6B89C700029A14 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		9EA26A922D6B8CF900029A14 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
-		9EA26A962D6B946C00029A14 /* EditNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNicknameViewController.swift; sourceTree = "<group>"; };
-		9EA26A992D6B94A000029A14 /* EditNicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNicknameViewModel.swift; sourceTree = "<group>"; };
+		9EA26A962D6B946C00029A14 /* ChangeTamaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTamaViewController.swift; sourceTree = "<group>"; };
+		9EA26A992D6B94A000029A14 /* ChangeTamaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTamaViewModel.swift; sourceTree = "<group>"; };
 		9EA26A9C2D6B977C00029A14 /* TamaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaModel.swift; sourceTree = "<group>"; };
 		9EA26AA12D6B9F7900029A14 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -249,7 +249,7 @@
 		9EA26A452D6A0A5300029A14 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				9EA26A952D6B944C00029A14 /* EditNickname */,
+				9EA26A952D6B944C00029A14 /* ChangeTama */,
 				9EA26A852D6B85FE00029A14 /* Setting */,
 				9EA26A782D6B056200029A14 /* Main */,
 				9EA26A5F2D6AC80400029A14 /* Onboarding */,
@@ -376,20 +376,20 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		9EA26A952D6B944C00029A14 /* EditNickname */ = {
+		9EA26A952D6B944C00029A14 /* ChangeTama */ = {
 			isa = PBXGroup;
 			children = (
 				9EA26A9B2D6B977000029A14 /* Model */,
 				9EA26A982D6B949400029A14 /* ViewModel */,
 				9EA26A9E2D6B991700029A14 /* Views */,
 			);
-			path = EditNickname;
+			path = ChangeTama;
 			sourceTree = "<group>";
 		};
 		9EA26A982D6B949400029A14 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				9EA26A992D6B94A000029A14 /* EditNicknameViewModel.swift */,
+				9EA26A992D6B94A000029A14 /* ChangeTamaViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -405,7 +405,7 @@
 		9EA26A9E2D6B991700029A14 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9EA26A962D6B946C00029A14 /* EditNicknameViewController.swift */,
+				9EA26A962D6B946C00029A14 /* ChangeTamaViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -515,7 +515,7 @@
 				9EA26A742D6AE43C00029A14 /* OnboardingDetailViewModel.swift in Sources */,
 				9EA26A8B2D6B866B00029A14 /* SettingViewController.swift in Sources */,
 				9EA26A9D2D6B977C00029A14 /* TamaModel.swift in Sources */,
-				9EA26A972D6B946C00029A14 /* EditNicknameViewController.swift in Sources */,
+				9EA26A972D6B946C00029A14 /* ChangeTamaViewController.swift in Sources */,
 				9EA26A492D6A0A5300029A14 /* NavigationBtnType.swift in Sources */,
 				9EA26A4A2D6A0A5300029A14 /* BaseTableViewCell.swift in Sources */,
 				9EA26A7B2D6B057100029A14 /* MainViewController.swift in Sources */,
@@ -525,7 +525,7 @@
 				9EA26A4C2D6A0A5300029A14 /* BaseView.swift in Sources */,
 				9EA269EF2D6A08A700029A14 /* AppDelegate.swift in Sources */,
 				9EA26A652D6ACA6300029A14 /* SelectedTamaCell.swift in Sources */,
-				9EA26A9A2D6B94A000029A14 /* EditNicknameViewModel.swift in Sources */,
+				9EA26A9A2D6B94A000029A14 /* ChangeTamaViewModel.swift in Sources */,
 				9EA26A1D2D6A0A1300029A14 /* UserDefaultsManager.swift in Sources */,
 				9EA26A812D6B41B300029A14 /* TamaTextFieldView.swift in Sources */,
 				9EA26A7F2D6B2B2300029A14 /* MainView.swift in Sources */,
