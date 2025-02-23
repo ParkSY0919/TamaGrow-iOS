@@ -45,6 +45,11 @@
 		9EA26A7F2D6B2B2300029A14 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A7E2D6B2B2300029A14 /* MainView.swift */; };
 		9EA26A812D6B41B300029A14 /* TamaTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A802D6B41B300029A14 /* TamaTextFieldView.swift */; };
 		9EA26A842D6B575900029A14 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A832D6B575900029A14 /* MainViewModel.swift */; };
+		9EA26A892D6B861A00029A14 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A882D6B861A00029A14 /* SettingCell.swift */; };
+		9EA26A8B2D6B866B00029A14 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A8A2D6B866B00029A14 /* SettingViewController.swift */; };
+		9EA26A8E2D6B884200029A14 /* SettingCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A8D2D6B884200029A14 /* SettingCellModel.swift */; };
+		9EA26A902D6B89C700029A14 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A8F2D6B89C700029A14 /* SettingView.swift */; };
+		9EA26A932D6B8CF900029A14 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A922D6B8CF900029A14 /* SettingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +89,11 @@
 		9EA26A7E2D6B2B2300029A14 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9EA26A802D6B41B300029A14 /* TamaTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaTextFieldView.swift; sourceTree = "<group>"; };
 		9EA26A832D6B575900029A14 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		9EA26A882D6B861A00029A14 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		9EA26A8A2D6B866B00029A14 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		9EA26A8D2D6B884200029A14 /* SettingCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCellModel.swift; sourceTree = "<group>"; };
+		9EA26A8F2D6B89C700029A14 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		9EA26A922D6B8CF900029A14 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +241,7 @@
 		9EA26A452D6A0A5300029A14 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				9EA26A852D6B85FE00029A14 /* Setting */,
 				9EA26A782D6B056200029A14 /* Main */,
 				9EA26A5F2D6AC80400029A14 /* Onboarding */,
 				9EA26A702D6AE33000029A14 /* OnboadingDetail */,
@@ -315,6 +326,42 @@
 			isa = PBXGroup;
 			children = (
 				9EA26A832D6B575900029A14 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9EA26A852D6B85FE00029A14 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26A912D6B8CEF00029A14 /* ViewModel */,
+				9EA26A872D6B860C00029A14 /* Cell */,
+				9EA26A862D6B860700029A14 /* Views */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		9EA26A862D6B860700029A14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26A8F2D6B89C700029A14 /* SettingView.swift */,
+				9EA26A8A2D6B866B00029A14 /* SettingViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9EA26A872D6B860C00029A14 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26A8D2D6B884200029A14 /* SettingCellModel.swift */,
+				9EA26A882D6B861A00029A14 /* SettingCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9EA26A912D6B8CEF00029A14 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26A922D6B8CF900029A14 /* SettingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -406,10 +453,13 @@
 				9EA26A482D6A0A5300029A14 /* BaseViewController.swift in Sources */,
 				9EA26A6A2D6ADE1800029A14 /* SelectedTamaPopupView.swift in Sources */,
 				9EA26A742D6AE43C00029A14 /* OnboardingDetailViewModel.swift in Sources */,
+				9EA26A8B2D6B866B00029A14 /* SettingViewController.swift in Sources */,
 				9EA26A492D6A0A5300029A14 /* NavigationBtnType.swift in Sources */,
 				9EA26A4A2D6A0A5300029A14 /* BaseTableViewCell.swift in Sources */,
 				9EA26A7B2D6B057100029A14 /* MainViewController.swift in Sources */,
 				9EA26A4B2D6A0A5300029A14 /* ViewTransitionType.swift in Sources */,
+				9EA26A932D6B8CF900029A14 /* SettingViewModel.swift in Sources */,
+				9EA26A8E2D6B884200029A14 /* SettingCellModel.swift in Sources */,
 				9EA26A4C2D6A0A5300029A14 /* BaseView.swift in Sources */,
 				9EA269EF2D6A08A700029A14 /* AppDelegate.swift in Sources */,
 				9EA26A652D6ACA6300029A14 /* SelectedTamaCell.swift in Sources */,
@@ -420,6 +470,7 @@
 				9EA26A722D6AE34300029A14 /* OnboardingViewController.swift in Sources */,
 				9EA26A772D6AFFBB00029A14 /* TamaType.swift in Sources */,
 				9EA26A202D6A0A1300029A14 /* UIButton+.swift in Sources */,
+				9EA26A902D6B89C700029A14 /* SettingView.swift in Sources */,
 				9EA26A212D6A0A1300029A14 /* UIView+.swift in Sources */,
 				9EA26A232D6A0A1300029A14 /* DateFormatterManager.swift in Sources */,
 				9EA26A242D6A0A1300029A14 /* UIImageView+.swift in Sources */,
@@ -427,6 +478,7 @@
 				9EA26A272D6A0A1300029A14 /* UIAlertManager.swift in Sources */,
 				9EA26A6C2D6AE04800029A14 /* OnboardingDetailViewController.swift in Sources */,
 				9EA26A282D6A0A1300029A14 /* UITextField+.swift in Sources */,
+				9EA26A892D6B861A00029A14 /* SettingCell.swift in Sources */,
 				9EA26A292D6A0A1300029A14 /* UIStackView+.swift in Sources */,
 				9EA26A2B2D6A0A1300029A14 /* ViewModelProtocol.swift in Sources */,
 				9EA26A2C2D6A0A1300029A14 /* StringLiterals.swift in Sources */,

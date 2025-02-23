@@ -28,7 +28,7 @@ final class MainViewController: BaseViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         
         mainView.configureUserDefaults()
     }
@@ -37,6 +37,13 @@ final class MainViewController: BaseViewController {
         super.viewDidLoad()
         
         bind()
+    }
+    
+    override func settingBtnTapped() {
+        super.settingBtnTapped()
+        
+        let vc = SettingViewController(viewModel: SettingViewModel())
+        viewTransition(viewController: vc, transitionStyle: .push)
     }
     
 }

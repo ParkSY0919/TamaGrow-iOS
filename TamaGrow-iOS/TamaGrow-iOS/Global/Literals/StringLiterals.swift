@@ -61,4 +61,13 @@ extension StringLiterals {
         static var waterFailMessage = "99 이하의 숫자를 입력해주세요."
     }
     
+    enum Setting {
+        static var nameCellImage = "pencil"
+        static var nameCellTitle = "내 이름 설정하기"
+        static var changeTamaCellImage = "moon.fill"
+        static var changeTamaCellTitle = "다마고치 변경하기"
+        static var resetTamaCellImage = "arrow.clockwise"
+        static var resetCellTitle = "데이터 초기화"
+    }
+    
 }
