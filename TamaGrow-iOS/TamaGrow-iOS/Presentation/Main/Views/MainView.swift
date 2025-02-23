@@ -124,7 +124,7 @@ final class MainView: BaseView {
             }
         }
         
-        messageLabel.text = StringLiterals.Main.messages.randomElement()
+        messageLabel.text = "\(UserDefaultsManager.nickname)" + (StringLiterals.Main.messages.randomElement() ?? "error")
         
         tamaView.nameLabel.setLabelUI(tamaType, font: .systemFont(ofSize: 16, weight: .bold), textColor: UIColor.fontLayer)
         
