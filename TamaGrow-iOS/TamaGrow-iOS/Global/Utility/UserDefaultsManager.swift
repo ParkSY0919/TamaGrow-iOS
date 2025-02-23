@@ -10,15 +10,35 @@ import Foundation
 enum UserDefaultsManager {
     
     enum Key: String {
-        case currentCity
+        case isOnboarding
+        case tamaType
+        case nickname
+        case level
+        case rice
+        case water
     }
     
-    static func removeObject<T: Hashable>(key: Key, type: T.Type) {
+    static func removeObject<T>(key: Key, type: T.Type) {
         UserDefaults.standard.removeObject(forKey: key.rawValue)
     }
+    
+    @TamaGrowUserDefaults(key: Key.isOnboarding.rawValue, defaultValue: true)
+    static var isOnboarding
+    
+    @TamaGrowUserDefaults(key: Key.tamaType.rawValue, defaultValue: TamaType.none.rawValue)
+    static var tamaType
 
-    @TamaGrowUserDefaults(key: Key.currentCity.rawValue, defaultValue: false)
-    static var currentCity
+    @TamaGrowUserDefaults(key: Key.nickname.rawValue, defaultValue: "대장")
+    static var nickname
+    
+    @TamaGrowUserDefaults(key: Key.level.rawValue, defaultValue: 1)
+    static var level
+    
+    @TamaGrowUserDefaults(key: Key.rice.rawValue, defaultValue: 0)
+    static var rice
+    
+    @TamaGrowUserDefaults(key: Key.water.rawValue, defaultValue: 0)
+    static var water
     
 }
 
