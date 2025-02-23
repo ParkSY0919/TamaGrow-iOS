@@ -9,7 +9,7 @@ import Foundation
 
 enum UserDefaultsManager {
     
-    enum Key: String {
+    enum Key: String, CaseIterable {
         case isOnboarding
         case tamaType
         case nickname

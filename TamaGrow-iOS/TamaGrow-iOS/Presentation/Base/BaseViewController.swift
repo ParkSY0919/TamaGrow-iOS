@@ -65,6 +65,9 @@ class BaseViewController: UIViewController {
                 navigationItem.rightBarButtonItem = navRightItem
             case .double:
                 print("이런 경우 없음")
+            case .save:
+                let navRightItem = UIBarButtonItem(title: StringLiterals.System.save, style: .done, target: self, action: #selector(settingBtnTapped))
+                navigationItem.rightBarButtonItem = navRightItem
             }
         case .both(let left, let right):
             print("이런 경우 없음")

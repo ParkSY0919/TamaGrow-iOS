@@ -14,6 +14,8 @@ extension StringLiterals {
     enum System {
         static var cancel = "취소"
         static var start = "시작하기"
+        static var change = "변경하기"
+        static var save = "저장"
     }
     
     enum SelectedTama {
@@ -59,6 +61,20 @@ extension StringLiterals {
         static var riceFailMessage = "99 이하의 숫자를 입력해주세요."
         static var waterFailTitle = "밥 먹기 실패"
         static var waterFailMessage = "99 이하의 숫자를 입력해주세요."
+    }
+    
+    enum Setting {
+        static var nameCellImage = "pencil"
+        static var nameCellTitle = "내 이름 설정하기"
+        static var changeTamaCellImage = "moon.fill"
+        static var changeTamaCellTitle = "다마고치 변경하기"
+        static var resetTamaCellImage = "arrow.clockwise"
+        static var resetCellTitle = "데이터 초기화"
+    }
+    
+    enum EditNickname {
+        static var navTitle = "\(UserDefaultsManager.nickname)님 이름 정하기"
+        static var editNicknamePlaceholder = "\(UserDefaultsManager.nickname)님의 이름을 알려주세요!"
     }
     
 }
