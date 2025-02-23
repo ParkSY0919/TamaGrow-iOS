@@ -17,13 +17,13 @@ enum UserDefaultsManager {
         UserDefaults.standard.removeObject(forKey: key.rawValue)
     }
 
-    @MaMooUserDefaults(key: Key.currentCity.rawValue, defaultValue: false)
+    @TamaGrowUserDefaults(key: Key.currentCity.rawValue, defaultValue: false)
     static var currentCity
     
 }
 
 @propertyWrapper
-struct MaMooUserDefaults<T: Hashable> {
+struct TamaGrowUserDefaults<T: Hashable> {
     
     let key: String
     let defaultValue: T
