@@ -38,8 +38,22 @@ final class SettingViewController: BaseViewController {
 private extension SettingViewController {
     
     func bind() {
-        let input = SettingViewModel.Input()
+        let input = SettingViewModel.Input(tableViewSelected: mainView.tableView.rx.itemSelected)
         let output = viewModel.transform(input: input)
+        
+        output.tableViewSelectedRow
+            .subscribe(with: self) { owner, row in
+                switch row {
+                case 0:
+                    print("0")
+                case 1:
+                    print("1")
+                case 2:
+                    owner.resetTypeCell()
+                default:
+                    print("")
+                }
+            }.disposed(by: disposeBag)
         
         output.settingCellItems
             .bind(to: mainView.tableView.rx.items(cellIdentifier: SettingCell.cellIdentifier, cellType: SettingCell.self)) { row, model, cell in
@@ -48,6 +62,30 @@ private extension SettingViewController {
                 cell.configureSettingCell(model: model)
             }
             .disposed(by: disposeBag)
+    }
+    
+    func resetTypeCell() {
+        let alert = UIAlertManager.showAlertWithAction(
+            title: "데이터 초기화",
+            message: "정말 다시 처음부터 시작하실 겁니까?!",
+            cancelFunc: true,
+            doneAction: UIAlertAction(title: "확인", style: .default, handler: { [weak self] _ in
+                guard let self else {return}
+                
+                UserDefaultsManager.Key.allCases.forEach {
+                    UserDefaults.standard.removeObject(forKey: $0.rawValue)
+                }
+                UserDefaultsManager.isOnboarding = true
+                UserDefaultsManager.tamaType = TamaType.none.rawValue
+                UserDefaultsManager.nickname = "대장"
+                UserDefaultsManager.level = 1
+                UserDefaultsManager.rice = 0
+                UserDefaultsManager.water = 0
+                
+                viewTransition(viewController: OnboardingViewController(), transitionStyle: .resetRootVCwithNav)
+            })
+        )
+        self.present(alert, animated: true)
     }
     
 }

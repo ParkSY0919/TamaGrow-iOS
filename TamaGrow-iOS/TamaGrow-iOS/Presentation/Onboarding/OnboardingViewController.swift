@@ -15,6 +15,10 @@ final class OnboardingViewController: BaseViewController {
         view = mainView
     }
     
+    init() {
+        super.init(navTitle: "다마고치 선택하기")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
