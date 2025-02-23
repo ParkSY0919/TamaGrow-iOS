@@ -307,8 +307,8 @@
 		9EA26A702D6AE33000029A14 /* OnboadingDetail */ = {
 			isa = PBXGroup;
 			children = (
-				9EA26A732D6AE43C00029A14 /* OnboardingDetailViewModel.swift */,
-				9EA26A6B2D6AE04800029A14 /* OnboardingDetailViewController.swift */,
+				9EA26AAC2D6BE0F400029A14 /* ViewModel */,
+				9EA26AAD2D6BE0FD00029A14 /* Views */,
 			);
 			path = OnboadingDetail;
 			sourceTree = "<group>";
@@ -457,6 +457,22 @@
 				9EA26AAA2D6BA43C00029A14 /* EditNicknameViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9EA26AAC2D6BE0F400029A14 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26A732D6AE43C00029A14 /* OnboardingDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9EA26AAD2D6BE0FD00029A14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26A6B2D6AE04800029A14 /* OnboardingDetailViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
