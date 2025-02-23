@@ -17,8 +17,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(windowScene: windowScene)
         
-        self.window?.rootViewController = UINavigationController(rootViewController: BaseViewController())
-        
+        switch UserDefaultsManager.isOnboarding {
+        case true:
+            self.window?.rootViewController = UINavigationController(rootViewController: OnboardingViewController(navTitle: "다마고치 선택하기"))
+        case false:
+            self.window?.rootViewController = UINavigationController(rootViewController: MainViewController(viewModel: MainViewModel()))
+        }
         self.window?.makeKeyAndVisible()
     }
 
