@@ -60,7 +60,7 @@ private extension OnboardingDetailViewController {
                 UserDefaultsManager.tamaType = i.rawValue
             }
         }
-        let vc = MainViewController(navTitle: "\(UserDefaultsManager.nickname)님의 다마고치", navBtnType: .right(.one))
+        let vc = MainViewController(viewModel: MainViewModel())
         viewTransition(viewController: vc, transitionStyle: .resetRootVCwithNav)
     }
     

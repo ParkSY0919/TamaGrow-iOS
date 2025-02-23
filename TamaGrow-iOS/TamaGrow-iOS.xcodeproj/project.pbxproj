@@ -41,6 +41,10 @@
 		9EA26A742D6AE43C00029A14 /* OnboardingDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A732D6AE43C00029A14 /* OnboardingDetailViewModel.swift */; };
 		9EA26A772D6AFFBB00029A14 /* TamaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A762D6AFFBB00029A14 /* TamaType.swift */; };
 		9EA26A7B2D6B057100029A14 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A7A2D6B057100029A14 /* MainViewController.swift */; };
+		9EA26A7D2D6B0B5400029A14 /* TamaEatButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A7C2D6B0B5400029A14 /* TamaEatButtonView.swift */; };
+		9EA26A7F2D6B2B2300029A14 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A7E2D6B2B2300029A14 /* MainView.swift */; };
+		9EA26A812D6B41B300029A14 /* TamaTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A802D6B41B300029A14 /* TamaTextFieldView.swift */; };
+		9EA26A842D6B575900029A14 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A832D6B575900029A14 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +80,10 @@
 		9EA26A732D6AE43C00029A14 /* OnboardingDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDetailViewModel.swift; sourceTree = "<group>"; };
 		9EA26A762D6AFFBB00029A14 /* TamaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaType.swift; sourceTree = "<group>"; };
 		9EA26A7A2D6B057100029A14 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9EA26A7C2D6B0B5400029A14 /* TamaEatButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaEatButtonView.swift; sourceTree = "<group>"; };
+		9EA26A7E2D6B2B2300029A14 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		9EA26A802D6B41B300029A14 /* TamaTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaTextFieldView.swift; sourceTree = "<group>"; };
+		9EA26A832D6B575900029A14 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				9EA26A662D6AD7BD00029A14 /* TamaView.swift */,
+				9EA26A7C2D6B0B5400029A14 /* TamaEatButtonView.swift */,
+				9EA26A802D6B41B300029A14 /* TamaTextFieldView.swift */,
 				9EA26A5E2D6AC7D000029A14 /* SelectedTama */,
 				9EA26A682D6ADCA900029A14 /* SelectedTamaPopup */,
 			);
@@ -286,6 +296,7 @@
 		9EA26A782D6B056200029A14 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				9EA26A822D6B574A00029A14 /* ViewModel */,
 				9EA26A792D6B056800029A14 /* Views */,
 			);
 			path = Main;
@@ -294,9 +305,18 @@
 		9EA26A792D6B056800029A14 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9EA26A7E2D6B2B2300029A14 /* MainView.swift */,
 				9EA26A7A2D6B057100029A14 /* MainViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		9EA26A822D6B574A00029A14 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26A832D6B575900029A14 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +414,8 @@
 				9EA269EF2D6A08A700029A14 /* AppDelegate.swift in Sources */,
 				9EA26A652D6ACA6300029A14 /* SelectedTamaCell.swift in Sources */,
 				9EA26A1D2D6A0A1300029A14 /* UserDefaultsManager.swift in Sources */,
+				9EA26A812D6B41B300029A14 /* TamaTextFieldView.swift in Sources */,
+				9EA26A7F2D6B2B2300029A14 /* MainView.swift in Sources */,
 				9EA26A672D6AD7BD00029A14 /* TamaView.swift in Sources */,
 				9EA26A722D6AE34300029A14 /* OnboardingViewController.swift in Sources */,
 				9EA26A772D6AFFBB00029A14 /* TamaType.swift in Sources */,
@@ -408,7 +430,9 @@
 				9EA26A292D6A0A1300029A14 /* UIStackView+.swift in Sources */,
 				9EA26A2B2D6A0A1300029A14 /* ViewModelProtocol.swift in Sources */,
 				9EA26A2C2D6A0A1300029A14 /* StringLiterals.swift in Sources */,
+				9EA26A7D2D6B0B5400029A14 /* TamaEatButtonView.swift in Sources */,
 				9EA269F02D6A08A700029A14 /* SceneDelegate.swift in Sources */,
+				9EA26A842D6B575900029A14 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

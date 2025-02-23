@@ -34,4 +34,28 @@ extension StringLiterals {
         }
     }
     
+    enum Main {
+        static var tamaDetail: String {
+            return "LV\(UserDefaultsManager.level) • 밥알 \(UserDefaultsManager.rice)개 • 물방울 \(UserDefaultsManager.water)개"
+        }
+        static var messages: [String] = [
+            "\(UserDefaultsManager.nickname)님, 밥 주세요! 🍚",
+            "목이 말라요! 물 한 모금만요! 💧",
+            "좋은 하루예요, \(UserDefaultsManager.nickname)님! 😊",
+            "밥을 먹었더니 힘이 솟아요! 💪",
+            "물 덕분에 상쾌해졌어요! 고마워요, \(UserDefaultsManager.nickname)님! 🙌",
+            "\(UserDefaultsManager.nickname)님 덕분에 성장하고 있어요! 🚀",
+            "배불러서 기분이 좋아요! 😋",
+            "다음 레벨까지 조금만 더 먹으면 돼요! 🎯",
+            "\(UserDefaultsManager.nickname)님, 저랑 더 오래 함께해 주세요! ❤️",
+            "밥과 물을 잘 먹었더니 레벨업 했어요! 🎉"
+        ]
+        static var riceTextFieldPlaceholder = "밥주세용"
+        static var waterTextFieldPlaceholder = "물주세용"
+        static var riceFailTitle = "밥 먹기 실패"
+        static var riceFailMessage = "99 이하의 숫자를 입력해주세요."
+        static var waterFailTitle = "밥 먹기 실패"
+        static var waterFailMessage = "99 이하의 숫자를 입력해주세요."
+    }
+    
 }
