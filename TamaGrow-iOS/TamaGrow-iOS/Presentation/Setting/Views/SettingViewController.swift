@@ -91,7 +91,7 @@ private extension SettingViewController {
                 UserDefaultsManager.rice = 0
                 UserDefaultsManager.water = 0
                 
-                viewTransition(viewController: OnboardingViewController(), transitionStyle: .resetRootVCwithNav)
+                viewTransition(viewController: OnboardingViewController(viewModel: OnboardingViewModel()), transitionStyle: .resetRootVCwithNav)
             })
         )
         self.present(alert, animated: true)

@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         switch UserDefaultsManager.isOnboarding {
         case true:
-            self.window?.rootViewController = UINavigationController(rootViewController: OnboardingViewController())
+            self.window?.rootViewController = UINavigationController(rootViewController: OnboardingViewController(viewModel: OnboardingViewModel()))
         case false:
             self.window?.rootViewController = UINavigationController(rootViewController: MainViewController(viewModel: MainViewModel()))
         }

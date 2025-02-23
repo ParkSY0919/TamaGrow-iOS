@@ -53,6 +53,7 @@
 		9EA26A972D6B946C00029A14 /* EditNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A962D6B946C00029A14 /* EditNicknameViewController.swift */; };
 		9EA26A9A2D6B94A000029A14 /* EditNicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A992D6B94A000029A14 /* EditNicknameViewModel.swift */; };
 		9EA26A9D2D6B977C00029A14 /* TamaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26A9C2D6B977C00029A14 /* TamaModel.swift */; };
+		9EA26AA22D6B9F7900029A14 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA26AA12D6B9F7900029A14 /* OnboardingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		9EA26A962D6B946C00029A14 /* EditNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNicknameViewController.swift; sourceTree = "<group>"; };
 		9EA26A992D6B94A000029A14 /* EditNicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNicknameViewModel.swift; sourceTree = "<group>"; };
 		9EA26A9C2D6B977C00029A14 /* TamaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaModel.swift; sourceTree = "<group>"; };
+		9EA26AA12D6B9F7900029A14 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,7 +283,8 @@
 		9EA26A5F2D6AC80400029A14 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				9EA26A712D6AE34300029A14 /* OnboardingViewController.swift */,
+				9EA26AA02D6B9F6B00029A14 /* ViewModel */,
+				9EA26A9F2D6B9F5D00029A14 /* Views */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -407,6 +410,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		9EA26A9F2D6B9F5D00029A14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26A712D6AE34300029A14 /* OnboardingViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9EA26AA02D6B9F6B00029A14 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9EA26AA12D6B9F7900029A14 /* OnboardingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -513,6 +532,7 @@
 				9EA26A672D6AD7BD00029A14 /* TamaView.swift in Sources */,
 				9EA26A722D6AE34300029A14 /* OnboardingViewController.swift in Sources */,
 				9EA26A772D6AFFBB00029A14 /* TamaType.swift in Sources */,
+				9EA26AA22D6B9F7900029A14 /* OnboardingViewModel.swift in Sources */,
 				9EA26A202D6A0A1300029A14 /* UIButton+.swift in Sources */,
 				9EA26A902D6B89C700029A14 /* SettingView.swift in Sources */,
 				9EA26A212D6A0A1300029A14 /* UIView+.swift in Sources */,
