@@ -18,8 +18,11 @@ final class OnboardingViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
         setDelegate()
+    }
+    
+    override func setStyle() {
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
     }
     
 }

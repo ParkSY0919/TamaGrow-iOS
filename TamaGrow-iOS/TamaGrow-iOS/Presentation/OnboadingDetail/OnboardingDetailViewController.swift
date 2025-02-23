@@ -39,12 +39,6 @@ final class OnboardingDetailViewController: BaseViewController {
         setAddTarget()
     }
     
-    override func setLayout() {
-//        mainView.snp.makeConstraints {
-//            $0.center.equalTo(view.safeAreaLayoutGuide)
-//        }
-    }
-    
 }
 
 private extension OnboardingDetailViewController {
