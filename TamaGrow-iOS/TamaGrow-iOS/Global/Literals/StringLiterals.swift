@@ -35,6 +35,9 @@ extension StringLiterals {
     }
     
     enum Main {
+        static var navTitle: String {
+            return "\(UserDefaultsManager.nickname)님의 다마고치"
+        }
         static var tamaDetail: String {
             return "LV\(UserDefaultsManager.level) • 밥알 \(UserDefaultsManager.rice)개 • 물방울 \(UserDefaultsManager.water)개"
         }

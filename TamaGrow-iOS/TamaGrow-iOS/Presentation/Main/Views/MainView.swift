@@ -115,6 +115,8 @@ final class MainView: BaseView {
     }
     
     func configureUserDefaults() {
+        UserDefaultsManager.level = calculateLevel()
+        
         let tamaType = UserDefaultsManager.tamaType
         for i in TamaType.allCases {
             if i.rawValue == tamaType {
@@ -129,8 +131,31 @@ final class MainView: BaseView {
         tamaInfoLabel.text = StringLiterals.Main.tamaDetail
     }
     
-    func setKeyboard() {
-        self.keyboardLayoutGuide.topAnchor.constraint(equalTo: riceTextField.bottomAnchor).isActive = true
+    private func calculateLevel() -> Int {
+        let levelValue = (Double(UserDefaultsManager.rice) / 5.0) + (Double(UserDefaultsManager.water) / 2.0)
+        
+        switch levelValue {
+        case 0..<20:
+            return 1
+        case 20..<30:
+            return 2
+        case 30..<40:
+            return 3
+        case 40..<50:
+            return 4
+        case 50..<60:
+            return 5
+        case 60..<70:
+            return 6
+        case 70..<80:
+            return 7
+        case 80..<90:
+            return 8
+        case 90..<100:
+            return 9
+        default:
+            return 10
+        }
     }
     
 }

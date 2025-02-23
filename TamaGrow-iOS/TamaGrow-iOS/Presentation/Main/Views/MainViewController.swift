@@ -20,11 +20,17 @@ final class MainViewController: BaseViewController {
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
         
-        super.init(navTitle: "\(UserDefaultsManager.nickname)님의 다마고치", navBtnType: .right(.one))
+        super.init(navTitle: StringLiterals.Main.navTitle, navBtnType: .right(.one))
     }
     
     override func loadView() {
         view = mainView
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        mainView.configureUserDefaults()
     }
     
     override func viewDidLoad() {
@@ -40,7 +46,10 @@ private extension MainViewController {
     func bind() {
         let input = MainViewModel.Input(
             riceTextField: mainView.riceTextField.textField.rx.text.orEmpty,
-            waterTextField: mainView.waterTextField.textField.rx.text.orEmpty
+            waterTextField: mainView.waterTextField.textField.rx.text.orEmpty,
+            riceTextFieldReturn: mainView.riceTextField.textField.rx.controlEvent(.editingDidEndOnExit),
+            waterTextFieldReturn: mainView.waterTextField.textField.rx.controlEvent(.editingDidEndOnExit),
+            riceEatBtnTapped: mainView.eatRiceBtn.eatBtn.rx.controlEvent(.touchUpInside), waterEatBtnTapped: mainView.eatWaterBtn.eatBtn.rx.controlEvent(.touchUpInside)
         )
         
         let output = viewModel.transform(input: input)
@@ -71,30 +80,20 @@ private extension MainViewController {
                 }
             }.disposed(by: disposeBag)
         
+        output.reloadUserDefaults
+            .asDriver()
+            .drive(with: self) { owner, _ in
+                owner.mainView.configureUserDefaults()
+            }.disposed(by: disposeBag)
         
-        
-        mainView.riceTextField.textField.rx.controlEvent(.editingDidEndOnExit)
-            .bind(with: self) { owner, _ in
-                print("riceTextField Return!")
-            }
-            .disposed(by: disposeBag)
-        
-        mainView.waterTextField.textField.rx.controlEvent(.editingDidEndOnExit)
-            .bind(with: self) { owner, _ in
-                print("waterTextField Return!")
-            }
-            .disposed(by: disposeBag)
-            
     }
     
 }
 
 
-
-
 //extension MainViewController: UITextFieldDelegate {
-    
-    //텍스트필드가 활성화되면 키보드레이아웃의 상단을 각 텍스트필드 바텀으로 잡아주려하였으나, 적용되지 않을 뿐더러, return 시 망가진 레이아웃을 그대로 반환
+
+//텍스트필드가 활성화되면 키보드레이아웃의 상단을 각 텍스트필드 바텀으로 잡아주려하였으나, 적용되지 않을 뿐더러, return 시 망가진 레이아웃을 그대로 반환
 //    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
 //        print(#function)
 //
@@ -107,5 +106,5 @@ private extension MainViewController {
 //
 //        return true
 //    }
-    
+
 //}

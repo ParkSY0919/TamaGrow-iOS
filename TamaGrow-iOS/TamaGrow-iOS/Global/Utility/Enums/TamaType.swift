@@ -25,28 +25,25 @@ enum TamaType: String, CaseIterable {
         case .none:
             imageBase = "no"
         }
-        print("@@@ \(imageBase)")
         switch UserDefaultsManager.level {
-        case 0..<20:
+        case 1:
             return UIImage(named: imageBase+"1") ?? UIImage()
-        case 20..<30:
+        case 2:
             return UIImage(named: imageBase+"2") ?? UIImage()
-        case 30..<40:
+        case 3:
             return UIImage(named: imageBase+"3") ?? UIImage()
-        case 40..<50:
+        case 4:
             return UIImage(named: imageBase+"4") ?? UIImage()
-        case 50..<60:
+        case 5:
             return UIImage(named: imageBase+"5") ?? UIImage()
-        case 60..<70:
+        case 6:
             return UIImage(named: imageBase+"6") ?? UIImage()
-        case 70..<80:
+        case 7:
             return UIImage(named: imageBase+"7") ?? UIImage()
-        case 80..<90:
+        case 8:
             return UIImage(named: imageBase+"8") ?? UIImage()
-        case 90..<100:
+        case 9, 10:
             return UIImage(named: imageBase+"9") ?? UIImage()
-        case 100...:
-            return UIImage(named: imageBase+"10") ?? UIImage()
         default:
             return UIImage(resource: .no)
         }
