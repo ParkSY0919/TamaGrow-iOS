@@ -32,7 +32,6 @@
 		9EA26A552D6A0A7D00029A14 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 9EA26A542D6A0A7D00029A14 /* Then */; };
 		9EA26A582D6A0A9700029A14 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 9EA26A572D6A0A9700029A14 /* RxCocoa */; };
 		9EA26A5A2D6A0A9700029A14 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9EA26A592D6A0A9700029A14 /* RxSwift */; };
-		9EA26A5D2D6A0AA800029A14 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 9EA26A5B2D6A0AA800029A14 /* .gitkeep */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +58,6 @@
 		9EA26A372D6A0A5300029A14 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		9EA26A382D6A0A5300029A14 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		9EA26A392D6A0A5300029A14 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		9EA26A5B2D6A0AA800029A14 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,7 +212,6 @@
 		9EA26A5C2D6A0AA800029A14 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				9EA26A5B2D6A0AA800029A14 /* .gitkeep */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -291,7 +288,6 @@
 			files = (
 				9EA269F22D6A08A700029A14 /* Assets.xcassets in Resources */,
 				9EA269F42D6A08A700029A14 /* LaunchScreen.storyboard in Resources */,
-				9EA26A5D2D6A0AA800029A14 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
