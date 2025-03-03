@@ -7,10 +7,14 @@
 
 import UIKit
 
+import RxCocoa
+import RxSwift
+
 final class OnboardingDetailViewController: BaseViewController {
     
     //MARK: - Properties
     private let viewModel: OnboardingDetailViewModel
+    private let disposeBag = DisposeBag()
     
     
     //MARK: - UI Properties
@@ -36,32 +40,30 @@ final class OnboardingDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setAddTarget()
+        bind()
     }
     
 }
 
 private extension OnboardingDetailViewController {
     
-    func setAddTarget() {
-        mainView.leftBtn.addTarget(self, action: #selector(leftBtnTapped), for: .touchUpInside)
-        mainView.rightBtn.addTarget(self, action: #selector(rightBtnTapped), for: .touchUpInside)
-    }
-    
-    @objc func leftBtnTapped() {
-        self.dismiss(animated: true)
-    }
-    
-    @objc func rightBtnTapped() {
-        print(#function)
-        UserDefaultsManager.isOnboarding = false
-        for i in TamaType.allCases {
-            if i.rawValue == viewModel.tamaName {
-                UserDefaultsManager.tamaType = i.rawValue
-            }
-        }
-        let vc = MainViewController(viewModel: MainViewModel())
-        viewTransition(viewController: vc, transitionStyle: .resetRootVCwithNav)
+    func bind() {
+        let input = OnboardingDetailViewModel.Input(
+            navLeftBtnTapped: mainView.leftBtn.rx.tap,
+            navRightBtnTapped: mainView.rightBtn.rx.tap
+        )
+        let output = viewModel.transform(input: input)
+        
+        output.navLeftBtnTapped
+            .drive(with: self) { owner, _ in
+                owner.dismiss(animated: true)
+            }.disposed(by: disposeBag)
+        
+        output.navRightBtnTapped
+            .drive(with: self) { owner, _ in
+                let vc = MainViewController(viewModel: MainViewModel())
+                owner.viewTransition(viewController: vc, transitionStyle: .resetRootVCwithNav)
+            }.disposed(by: disposeBag)
     }
     
 }
